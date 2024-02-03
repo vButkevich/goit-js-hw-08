@@ -66,6 +66,7 @@
     },
   ];
 
+  let gallery = document.querySelector('ul.gallery');
   let galleryHTML = images
     .map(image => {
       let galleryItem = `
@@ -83,10 +84,9 @@
       return galleryItem;
     })
     .join('');
-  document.querySelector('ul.gallery').innerHTML = galleryHTML;
-
-  let gallery = document.querySelector('ul.gallery');
+  gallery.innerHTML = galleryHTML;
   gallery.addEventListener('click', handleClick);
+
   function handleClick(event) {
     event.preventDefault();
     if (event.target.tagName !== 'IMG') {
