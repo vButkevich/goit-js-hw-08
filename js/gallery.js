@@ -93,6 +93,7 @@
       return;
     }
     let img = event.target;
+    console.log(img.alt);
     console.log(img.dataset.source);
 
     const instance = basicLightbox.create(`
